@@ -14,7 +14,7 @@ use app\api\model\Pjaauc_t as PjaaucModel;
 
 class Project
 {
-    public function projectList(){
+    public function projectList($area){
 //        return 'aaa';
 //        Db::name('pjaauc_t')->where('pjaauc001')->select();
 
@@ -22,7 +22,7 @@ class Project
 
 //        $result = PjaaucModel::find()->hidden(['PJAAUCENT']);
 
-        $result = PjaaucModel::getProjectList();
+        $result = PjaaucModel::getProjectList($area);
 //        return var_dump($result);
         return $result;
 //        $db = '(DESCRIPTION = (ADDRESS = (PROTOCOL = TCP)(HOST = 172.16.100.187)(PORT = 1521)) (CONNECT_DATA = (SERVER = DEDICATED) (SERVICE_NAME = topprd)))';
